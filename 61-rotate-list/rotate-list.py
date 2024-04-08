@@ -12,7 +12,7 @@ class Solution:
         while current.next:
             current = current.next
             length += 1
-        k %= length
+        k %= length #for effective rotations
         if k == 0:
             return head
         current.next = head

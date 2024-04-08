@@ -1,4 +1,4 @@
-from math import gcd
+import math
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -11,7 +11,7 @@ class Solution:
         
         current = head
         while current.next:
-            gcd_val = gcd(current.val, current.next.val)
+            gcd_val = math.gcd(current.val, current.next.val)
             new_node = ListNode(gcd_val)
             new_node.next = current.next
             current.next = new_node
